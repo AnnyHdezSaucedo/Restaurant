@@ -1,2 +1,11 @@
-<h1>Clientes#index</h1>
-<p>Find me in app/views/clientes/index.html.erb</p>
+<h1>Clientes Canirac</h1>
+
+<% @clientes.each do |clientes| %>
+<h2><%= link_to clientes.email, clientes %></h2>
+<p> <%= clientes.nombre %> </p>
+<p> 
+<%= link_to "Borrar", clientes, :confirm => "Estas seguro?", :method => :delete %>
+</p>
+<hr />
+<% end %>
+<p><%= link_to "Agregar nuevo cliente", new_cliente_path %></p>
