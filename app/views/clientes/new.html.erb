@@ -1,0 +1,22 @@
+<h1>Nuevo Cliente</h1>
+
+<%= form_for @clientes do |f| %>
+	<% if @clientes.errors.any? %>
+		<h2>Errores:</h2>	
+		<ul>
+			<% @clientes.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+		</ul>
+	<% end %>
+<p>
+	<%= f.label :title %><br />
+	<%= f.text_field :title %><br />
+<br />
+	<%= f.label :content %><br />
+	<%= f.text_area :content %>
+</p>
+<p>
+	<%= f.submit "Agregar Nuevo Cliente" %>
+</p>
+<% end %>
