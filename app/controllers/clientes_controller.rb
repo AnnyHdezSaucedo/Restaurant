@@ -1,5 +1,6 @@
 class ClientesController < ApplicationController
   def index
+    @clientes= Cliente.all
   end
 
   def show
@@ -25,8 +26,18 @@ class ClientesController < ApplicationController
   end
 
   def update
+    @clientes = Cliente.find(params[:id])
+       
+        if @clientes.update_attributes(params[:cliente])
+                redirect_to clientes_path, :notice => "El registro cliente se ha actualizado"
+        else
+                render "edit"
+        end
   end
 
   def destroy
+    @clientes = Cliente.find(params[:id])
+    @clientes.destroy
+    redirect_to clientes_path, :notice => "El registro cliente se ha borrado"
   end
 end
