@@ -10,11 +10,35 @@
 		</ul>
 	<% end %>
 <p>
-	<%= f.label :title %><br />
-	<%= f.text_field :title %><br />
+	<%= f.label :c_tarjeta_cliente %><br />
+	<%= f.text_field :c_targeta_cliente %><br />
 <br />
-	<%= f.label :content %><br />
-	<%= f.text_area :content %>
+	<%= f.label :nombre %><br />
+	<%= f.text_area :nombre %>
+<br />
+	<%= f.label :ApellidoPaterno %><br />
+	<%= f.text_area :a_paterno %>
+<br />
+	<%= f.label :ApellidoMaterno %><br />
+	<%= f.text_area :a_materno %>
+<br />
+	<%= f.label :email %><br />
+	<%= f.text_area :email %>
+<br />
+	<%= f.label :t_celular %><br />
+	<%= f.text_area :t_celular %>
+<br />
+	<%= f.label :domicilio %><br />
+	<%= f.text_area :domicilio %>
+<br />
+	<%= f.label :c_postal %><br />
+	<%= f.text_area :c_postal %>
+<br />
+	<%= f.label :sexo %><br />
+	<%= f.text_area :sexo %>
+<br />
+	<%= f.label :fecha_alta %><br />
+	<%= f.text_area :fecha_alta %>
 </p>
 <p>
 	<%= f.submit "Agregar Nuevo Cliente" %>
