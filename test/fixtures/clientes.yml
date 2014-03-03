@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  c_targeta_cliente: MyText
+  nombre: MyText
+  a_paterno: MyText
+  a_materno: MyText
+  email: MyText
+  t_celular: MyText
+  domicilio: MyText
+  c_postal: 1
+  sexo: MyText
+  fecha_alta: 2014-03-03
+
+two:
+  c_targeta_cliente: MyText
+  nombre: MyText
+  a_paterno: MyText
+  a_materno: MyText
+  email: MyText
+  t_celular: MyText
+  domicilio: MyText
+  c_postal: 1
+  sexo: MyText
+  fecha_alta: 2014-03-03

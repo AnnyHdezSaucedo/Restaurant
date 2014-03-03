@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyText
+  direccion: MyText
+  saldo: 9.99
+  municipio: MyText
+
+two:
+  nombre: MyText
+  direccion: MyText
+  saldo: 9.99
+  municipio: MyText

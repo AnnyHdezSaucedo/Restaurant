@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  restaurant: 1
+  usuario: 1
+  cliente: 1
+  fecha: 2014-03-03
+  total: 9.99
+  promocion: MyText
+  nombre: MyText
+  factura: MyText
+  pago_tarjeta: 9.99
+
+two:
+  restaurant: 1
+  usuario: 1
+  cliente: 1
+  fecha: 2014-03-03
+  total: 9.99
+  promocion: MyText
+  nombre: MyText
+  factura: MyText
+  pago_tarjeta: 9.99
