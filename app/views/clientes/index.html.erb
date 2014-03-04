@@ -1,8 +1,8 @@
 <h1>Clientes Canirac</h1>
 
 <% @clientes.each do |clientes| %>
-<h2><%= link_to clientes.email, clientes %></h2>
-<p> <%= clientes.nombre %> </p>
+<h2><%= link_to clientes.nombre, clientes %></h2>
+<p> <%= clientes.a_paterno %> </p>
 <p> 
 <%= link_to "Borrar", clientes, :confirm => "Estas seguro?", :method => :delete %>
 </p>
