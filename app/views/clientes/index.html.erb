@@ -1,11 +1,23 @@
 <h1>Clientes Canirac</h1>
+<%= link_to 'Crear Cliente', :action => :new %>
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido paterno</th>
+    <th>Apellido materno</th>
+    <th>Correo electronico</th>
+    <th></th>
+  </tr>
 
-<% @clientes.each do |clientes| %>
-<h2><%= link_to clientes.nombre, clientes %></h2>
-<p> <%= clientes.a_paterno %> </p>
-<p> 
-<%= link_to "Borrar", clientes, :confirm => "Estas seguro?", :method => :delete %>
-</p>
-<hr />
-<% end %>
-<p><%= link_to "Agregar nuevo cliente", new_cliente_path %></p>
+  <% @clientes.each do |clientes| %>
+    <tr>
+      <td><%= clientes.nombre %></td>
+      <td><%= clientes.a_paterno %></td>
+      <td><%= clientes.a_materno %></td>
+      <td><%= clientes.email %></td>
+      <td><%= link_to 'Mostrar', :action => :show, :id => clientes.id %></td>
+      <td><%= link_to 'Editar', :action => :edit, :id => clientes.id %></td>
+      <td><%= link_to 'Eliminar', {:action => :destroy, :id => clientes.id}, :method => :delete, :data => { :confirm => "¿Eliminar cliente?"} %></td>
+    </tr>
+  <% end %>
+</table>

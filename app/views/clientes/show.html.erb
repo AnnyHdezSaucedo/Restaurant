@@ -1,4 +1,23 @@
-<h1><%= @clientes.nombre %></h1>
-<p><%= @clientes.email%></p>
-<small> <% @clientes.created_at %></small>
+<h1>Clientes</h1>
 
+<p>
+  <strong>Nombre:</strong>
+  <%= @clientes.nombre %>
+</p>
+
+<p>
+  <strong>Apellido paterno:</strong>
+  <%= @clientes.a_paterno %>
+</p>
+
+<p>
+  <strong>Apellido Materno:</strong>
+  <%= @clientes.a_materno %>
+</p>
+
+<p>
+  <strong>Correo electronico:</strong>
+  <%= @clientes.email %>
+</p>
+
+<%= link_to 'Volver', :action => :index %> | <%= link_to 'Editar', :action => :edit, :id => @clientes.id %>

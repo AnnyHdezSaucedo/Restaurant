@@ -12,10 +12,10 @@ class ClientesController < ApplicationController
   end
 
   def create
-    @clientes= Cliente.new(params[:clientes])
+    @clientes= Cliente.new(cliente_params)
 
     if @clientes.save
-      redirect_to clientes_path, :notice => "Cliente guardado"
+      redirect_to :action => :show, :id => @clientes.id #clientes_path, :notice => "Cliente guardado"
     else
       render "new"
     end
@@ -28,8 +28,8 @@ class ClientesController < ApplicationController
   def update
     @clientes = Cliente.find(params[:id])
        
-        if @clientes.update_attributes(params[:cliente])
-                redirect_to clientes_path, :notice => "El registro cliente se ha actualizado"
+        if @clientes.update(cliente_params)
+                redirect_to :action => :show, :id => @clientes.id #clientes_path, :notice => "El registro cliente se ha actualizado"
         else
                 render "edit"
         end
@@ -38,6 +38,15 @@ class ClientesController < ApplicationController
   def destroy
     @clientes = Cliente.find(params[:id])
     @clientes.destroy
-    redirect_to clientes_path, :notice => "El registro cliente se ha borrado"
+    #redirect_to clientes_path, :notice => "El registro cliente se ha borrado"
+
+    redirect_to :action => :index
   end
+
+  private 
+  def cliente_params
+    params.require(:cliente).permit(:c_targeta_cliente, :nombre, :a_paterno, :a_materno, :email, :t_celular, :domicilio, :fecha_alta, :c_postal, :sexo, :fecha_alta)
+  end
+
+
 end
