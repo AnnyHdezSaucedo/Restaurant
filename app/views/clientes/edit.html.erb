@@ -1,6 +1,6 @@
 <h1>Editar Clientes</h1>
 
-<%= form_for :clientes, :url => {:action => :update, :id => @clientes.id}, :method => :put do |f| %>
+<%= form_for @clientes do |f|%>
         <% if @clientes.errors.any? %>
                 <h2>Errores:</h2>      
                 <ul>

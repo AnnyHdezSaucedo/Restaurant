@@ -28,11 +28,11 @@ class ClientesController < ApplicationController
   def update
     @clientes = Cliente.find(params[:id])
        
-        if @clientes.update(cliente_params)
-                redirect_to :action => :show, :id => @clientes.id #clientes_path, :notice => "El registro cliente se ha actualizado"
-        else
-                render "edit"
-        end
+    if @clientes.update(cliente_params)
+      redirect_to :action => :show, :id => @clientes.id #clientes_path, :notice => "El registro cliente se ha actualizado"
+    else
+      render "edit"
+    end
   end
 
   def destroy
