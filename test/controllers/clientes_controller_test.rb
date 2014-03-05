@@ -1,10 +1,8 @@
 require 'test_helper'
 
 class ClientesControllerTest < ActionController::TestCase
-  def setup
-    @clientes=clientes(:one)
-  end
-
+  
+  setup :initialize_cliente
 
 
   test "should get index" do
@@ -22,18 +20,12 @@ class ClientesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get create" do
-    get :create
-    assert_response :success
+  test "should create client" do
+    assert_difference('Clientes.count') do
+      cliente :create, clientes: {nombre: 'ana laura'} 
+    end 
+    assert_redirected_to clientes_path(assigns(:cliente))
   end
-
-  test "should create post" do
-    assert_difference('Cliente.count') do
-    cliente :create, cliente: {nombre: 'ana laura'}
-  end
- 
-  assert_redirected_to post_path(assigns(:cliente))
-end
 
   test "should get edit" do
     get :edit, id:@clientes.id
@@ -42,14 +34,19 @@ end
 
   test "should get update" do
     patch :update, id:@clientes.id, clientes:{}
-    assert_redirected_to cliente_path(assigns(:cliente))
+    assert_redirected_to clientes_path(assigns(:cliente))
   end
 
   test "should get destroy" do
-    assert_difference('Cliente.count', -1) do
+    assert_difference('Clientes.count', -1) do
       delete :destroy, id:@clientes.id
     end
-    assert_redirected_to cliente_path
+    assert_redirected_to clientes_path
+  end
+
+  private
+  def initialize_cliente
+    @clientes=clientes(:one)
   end
 
 end
