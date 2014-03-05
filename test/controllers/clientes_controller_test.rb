@@ -4,7 +4,6 @@ class ClientesControllerTest < ActionController::TestCase
   
   setup :initialize_cliente
 
-
   test "should get index" do
     get :index
     assert_response :success
@@ -21,10 +20,11 @@ class ClientesControllerTest < ActionController::TestCase
   end
 
   test "should create client" do
-    assert_difference('Clientes.count') do
-      cliente :create, clientes: {nombre: 'ana laura'} 
+    assert_difference('Cliente.count') do
+      post :create, clientes: {c_targeta_cliente: '1234567', nombre: 'Jesus', a_paterno: 'Mora', a_materno: 'Rios', email:'jesus@hotmail.com',} 
     end 
     assert_redirected_to clientes_path(assigns(:cliente))
+    assert_equal 'client was successfully created.', flash[:notice]
   end
 
   test "should get edit" do
@@ -38,7 +38,7 @@ class ClientesControllerTest < ActionController::TestCase
   end
 
   test "should get destroy" do
-    assert_difference('Clientes.count', -1) do
+    assert_difference('Cliente.count', -1) do
       delete :destroy, id:@clientes.id
     end
     assert_redirected_to clientes_path

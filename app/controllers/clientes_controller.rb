@@ -15,7 +15,7 @@ class ClientesController < ApplicationController
     @clientes= Cliente.new(cliente_params)
 
     if @clientes.save
-      redirect_to :action => :show, :id => @clientes.id #clientes_path, :notice => "Cliente guardado"
+      redirect_to :action => :show, :id => @clientes.id
     else
       render "new"
     end
@@ -29,7 +29,7 @@ class ClientesController < ApplicationController
     @clientes = Cliente.find(params[:id])
        
     if @clientes.update(cliente_params)
-      redirect_to :action => :show, :id => @clientes.id #clientes_path, :notice => "El registro cliente se ha actualizado"
+      redirect_to :action => :show, :id => @clientes.id 
     else
       render "edit"
     end
@@ -38,7 +38,6 @@ class ClientesController < ApplicationController
   def destroy
     @clientes = Cliente.find(params[:id])
     @clientes.destroy
-    #redirect_to clientes_path, :notice => "El registro cliente se ha borrado"
 
     redirect_to :action => :index
   end
