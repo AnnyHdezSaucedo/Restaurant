@@ -1,13 +1,19 @@
 require 'test_helper'
 
 class ClientesControllerTest < ActionController::TestCase
+  def setup
+    @clientes=clientes(:one)
+  end
+
+
+
   test "should get index" do
     get :index
     assert_response :success
   end
 
   test "should get show" do
-    get :show, :id => message.to_param
+    get :show, id:@clientes.id
     assert_response :success
   end
 
@@ -17,23 +23,33 @@ class ClientesControllerTest < ActionController::TestCase
   end
 
   test "should get create" do
-    get :create, :id => 1
-    assert_response :notice => "Cliente guardado"
+    get :create
+    assert_response :success
   end
 
+  test "should create post" do
+    assert_difference('Cliente.count') do
+    cliente :create, cliente: {nombre: 'ana laura'}
+  end
+ 
+  assert_redirected_to post_path(assigns(:cliente))
+end
+
   test "should get edit" do
-    get :edit, :id => message.to_param
+    get :edit, id:@clientes.id
     assert_response :success
   end
 
   test "should get update" do
-    get :update, :id => message.to_param
-    assert_response :notice => "El registro cliente se ha actualizado"
+    patch :update, id:@clientes.id, clientes:{}
+    assert_redirected_to cliente_path(assigns(:cliente))
   end
 
   test "should get destroy" do
-    get :destroy, :id => message.to_param
-    assert_response :notice => "El registro cliente se ha borrado"
+    assert_difference('Cliente.count', -1) do
+      delete :destroy, id:@clientes.id
+    end
+    assert_redirected_to cliente_path
   end
 
 end
