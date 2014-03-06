@@ -1,12 +1,7 @@
 Restaurant::Application.routes.draw do
-   root :to => "clientes#index"
-   resources :clientes
+  root :to => "clientes#index"
+  resources :clientes 
  
-  
-
-
-  
-
   # get "venta/index"
   # get "venta/show"
   # get "venta/new"
