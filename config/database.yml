@@ -9,9 +9,9 @@ development:
   adapter: postgresql
   encoding: unicode
   database: Restaurant-development
-  pool: 5
-  username: Restaurant
-  password: hola
+ # pool: 5
+ # username: Restaurant
+ # password: hola
 #  timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
@@ -23,9 +23,9 @@ test:
   adapter: postgresql
   encoding: unicode
   database: Restaurant-test
-  pool: 5
-  username: Restaurant
-  password: hola
+  #pool: 5
+ # username: Restaurant
+#  password: hola
 # timeout: 5000
 
 production:
@@ -34,7 +34,7 @@ production:
   adapter: postgresql
   encoding: unicode
   database: Restaurant-production
-  pool: 5
-  username: Restaurant
-  password: hola
+#  pool: 5
+#  username: Restaurant
+#  password: hola
 # timeout: 5000
