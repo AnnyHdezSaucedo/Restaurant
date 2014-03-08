@@ -11,4 +11,4 @@ before_install:
   # -bundle exec jekyll build''
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
-script: createuser -s Restaurant
+#script: createuser -s Restaurant
