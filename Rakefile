@@ -5,7 +5,7 @@ require File.expand_path('../config/application', __FILE__)
 
 Restaurant::Application.load_tasks
  task :test do
-  test_files = FileList['test/controllers/*_seltest.rb']
+  test_files = FileList['test/controllers/*_test.rb']
   test_files.each do|file|
     ruby "#{file}"
   end
