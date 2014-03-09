@@ -6,7 +6,7 @@ require "test/unit"
 class AltaClientesSel < Test::Unit::TestCase
 
   def setup
-    @driver = Selenium::WebDriver.for :firefox
+    @driver = Selenium::WebDriver.for :phantomjs
     @base_url = "http://still-meadow-3217.herokuapp.com/"
     @accept_next_alert = true
     @driver.manage.timeouts.implicit_wait = 30
