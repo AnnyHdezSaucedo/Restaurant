@@ -6,6 +6,7 @@ ruby '2.0.0'
 gem 'rails', '4.0.2'
 gem 'simplecov'
 gem 'rubocop'
+gem 'selenium-webdriver'
 
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
