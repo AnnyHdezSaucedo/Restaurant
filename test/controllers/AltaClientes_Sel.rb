@@ -12,7 +12,7 @@ class AltaClientes_Sel < Test::Unit::TestCase
     @selenium = Selenium::Client::Driver.new \
       :host => "localhost",
       :port => 4444,
-      :browser => "*chrome",
+      :browser => "*phantomjs",
       :url => "http://still-meadow-3217.herokuapp.com/",
       :timeout_in_second => 60
 
