@@ -2,7 +2,7 @@
 require 'simplecov'
 SimpleCov.start
 
-require './test_helper'
+require 'test_helper.rb'
 require 'rubocop/rake_task'
 
 # Clase de pruebas de ClientesController
