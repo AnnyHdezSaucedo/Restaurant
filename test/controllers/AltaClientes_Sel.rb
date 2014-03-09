@@ -2,6 +2,8 @@ require "json"
 require "selenium-webdriver"
 gem "test-unit"
 require "test/unit"
+require 'simplecov'
+SimpleCov.start
 
 class AltaClientesSel < Test::Unit::TestCase
 
