@@ -5,7 +5,7 @@ require "selenium/client"
 
 require 'test_helper'
 
-class AltaClientes_Sel < Test::Unit::TestCase
+class AltaClientes_Test < Test::Unit::TestCase
 
   def setup
     @verification_errors = []
