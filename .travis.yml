@@ -8,7 +8,6 @@ rvm:
   # - rbx-18mode
 before_install:
    - gem install sqlite3
-   - phantomjs 1.9.2
   # -bundle exec jekyll build''
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
