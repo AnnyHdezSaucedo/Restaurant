@@ -47,7 +47,7 @@ class ClientesController < ApplicationController
   # Acceso privado y acceso a atributos
   def cliente_params
     params.require(:cliente).permit(:c_targeta_cliente,
-                   :nombre, :a_paterno, :a_materno, :email,
-                   :t_celular, :domicilio, :fecha_alta, :c_postal, :sexo, :fecha_alta)
+                   :nombre, :a_paterno, :a_materno, :email, :t_celular,
+                   :domicilio, :fecha_alta, :c_postal, :sexo, :fecha_alta)
   end
 end
