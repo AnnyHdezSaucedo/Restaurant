@@ -10,4 +10,10 @@ Restaurant::Application.load_tasks
     ruby "#{file}"
   end
 end
+ task :test do
+  test_files = FileList['test/integration/*_test.rb']
+  test_files.each do|file|
+    ruby "#{file}"
+  end
+end
 	
