@@ -53,14 +53,14 @@ class AltaClientesSel < Test::Unit::TestCase
   end
   
   def element_present?(how, what)
-    ${receiver}.find_element(how, what)
+    @driver.find_element(how, what)
     true
   rescue Selenium::WebDriver::Error::NoSuchElementError
     false
   end
   
   def alert_present?()
-    ${receiver}.switch_to.alert
+    @driver.switch_to.alert
     true
   rescue Selenium::WebDriver::Error::NoAlertPresentError
     false
@@ -73,7 +73,7 @@ class AltaClientesSel < Test::Unit::TestCase
   end
   
   def close_alert_and_get_its_text(how, what)
-    alert = ${receiver}.switch_to().alert()
+    alert = @driver.switch_to().alert()
     alert_text = alert.text
     if (@accept_next_alert) then
       alert.accept()
