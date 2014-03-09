@@ -3,6 +3,8 @@ require "rubygems"
 gem "selenium-client"
 require "selenium/client"
 
+require 'test_helper'
+
 class AltaClientes_Sel < Test::Unit::TestCase
 
   def setup
