@@ -43,10 +43,11 @@ class ClientesController < ApplicationController
     redirect_to clientes_url
     # redirect_to :action => :index
   end
-  # Acceso privado
   private
-  # Acceso a atributos
+  # Acceso privado y acceso a atributos
   def cliente_params
-  params.require(:cliente).permit(:c_targeta_cliente, :nombre, :a_paterno, :a_materno, :email, :t_celular, :domicilio, :fecha_alta, :c_postal, :sexo, :fecha_alta)
+    params.require(:cliente).permit(:c_targeta_cliente,
+                   :nombre, :a_paterno, :a_materno, :email,
+                   :t_celular, :domicilio, :fecha_alta, :c_postal, :sexo, :fecha_alta)
   end
 end

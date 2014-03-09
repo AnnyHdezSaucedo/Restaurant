@@ -8,6 +8,7 @@ gem 'simplecov'
 gem 'rubocop'
 gem 'selenium-webdriver'
 gem 'selenium-client'
+gem 'test-unit'
 
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
